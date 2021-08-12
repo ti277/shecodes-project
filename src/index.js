@@ -1,26 +1,43 @@
-let date = new Date();
-let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
-let day = days[date.getDay()];
-let timeHours = date.getHours();
-if (timeHours < 10) {
-  timeHours = `0${timeHours}`;
-}
-let timeMinutes = date.getMinutes();
-if (timeMinutes < 10) {
-  timeMinutes = `0${timeMinutes}`;
-}
-document.getElementById(
-  "dateTime"
-).innerHTML = `${day}, ${timeHours}:${timeMinutes}`;
+// Timestamp
 
-// City
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let timeHours = date.getHours();
+  if (timeHours < 10) {
+    timeHours = `0${timeHours}`;
+  }
+  let timeMinutes = date.getMinutes();
+  if (timeMinutes < 10) {
+    timeMinutes = `0${timeMinutes}`;
+  }
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+  let day = days[date.getDay()];
+  return `${day}, ${timeHours}:${timeMinutes}`;
+}
+
+// City Update
 
 function showTemperature(response) {
   document.querySelector(
     "h1"
   ).innerHTML = `Current Weather in ${response.data.name}`;
   let temp = Math.round(response.data.main.temp);
-  document.querySelector("#temperature").innerHTML = `${temp}°C`;
+  document.querySelector("#temperature").innerHTML = `${temp}`;
+
+  document.querySelector(
+    "#humidity"
+  ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
+
+  document.querySelector("#windspeed").innerHTML = `Wind: ${Math.round(
+    response.data.wind.speed
+  )} km/h`;
+
+  document.querySelector("#dateTime").innerHTML = formatDate(
+    response.data.dt * 1000
+  );
+  document.querySelector(
+    "#dateTime"
+  ).innerHTML = `${day}, ${timeHours}:${timeMinutes}`;
 }
 
 function displayCity(event) {

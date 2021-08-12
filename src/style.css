@@ -1,6 +1,15 @@
 h1 {
   color: darkblue;
 }
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  font-size: 15px;
+}
 .units {
   font-size: 15px;
   position: relative;
@@ -58,6 +67,9 @@ h1 {
   color: darkblue;
 }
 
+.col-sm-6 {
+  padding: 0;
+}
 .footnote {
   color: grey;
   font-size: 10px;
