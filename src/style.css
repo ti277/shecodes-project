@@ -1,0 +1,46 @@
+h1 {
+  color: darkblue;
+}
+
+#dateTime {
+  font-size: 20px;
+  color: rgba(0, 0, 139, 0.555);
+}
+#celsius,
+#fahrenheit {
+  font-size: 20px;
+  color: rgba(0, 0, 139, 0.555);
+}
+
+#celsius:hover {
+  color: darkblue;
+}
+
+#fahrenheit:hover {
+  color: darkblue;
+}
+
+.precipitation {
+  color: grey;
+  font-size: 15px;
+}
+.button {
+  color: darkblue;
+  background-color: white;
+  border: white;
+  border-radius: 5px;
+
+  transition: ease-in-out 200ms;
+}
+.button:hover {
+  color: white;
+  background-color: darkblue;
+}
+
+.card {
+  padding: 20px;
+  margin: 20px;
+}
+.card-title {
+  color: darkblue;
+}
