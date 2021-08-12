@@ -48,3 +48,22 @@ function searchLocation(event) {
 
 let locationButton = document.getElementById("locate");
 locationButton.addEventListener("click", searchLocation);
+
+// Units Converter // Bonus
+//function converttoFahrenheit(event) {
+//event.preventDefault();
+//let temperatureElement = document.getElementById("temperature");
+//  temperatureElement.innerHTML = "66°";
+//}
+
+//function converttoCelsius(event) {
+//  event.preventDefault();
+//  let temperatureElement = document.getElementById("temperature");
+//  temperatureElement.innerHTML = "20°";
+//}
+
+//let fahrenheitLink = document.getElementById("fahrenheit");
+//fahrenheitLink.addEventListener("click", converttoFahrenheit);
+
+//let celsiusLink = document.getElementById("celsius");
+//celsiusLink.addEventListener("click", converttoCelsius);

@@ -1,14 +1,24 @@
 h1 {
   color: darkblue;
 }
+.units {
+  font-size: 15px;
+  position: relative;
+  top: -8px;
+}
 
+#searchengine {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
 #dateTime {
   font-size: 20px;
   color: rgba(0, 0, 139, 0.555);
 }
 #celsius,
 #fahrenheit {
-  font-size: 20px;
+  font-size: 15px;
   color: rgba(0, 0, 139, 0.555);
 }
 
@@ -20,6 +30,9 @@ h1 {
   color: darkblue;
 }
 
+.container {
+  max-width: 800px;
+}
 .precipitation {
   color: grey;
   font-size: 15px;
