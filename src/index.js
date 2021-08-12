@@ -22,7 +22,7 @@ function showTemperature(response) {
     "h1"
   ).innerHTML = `Current Weather in ${response.data.name}`;
   let temp = Math.round(response.data.main.temp);
-  document.querySelector("#temperature").innerHTML = `${temp}`;
+  document.querySelector("#temperature").innerHTML = `${temp}°`;
 
   document.querySelector(
     "#humidity"
