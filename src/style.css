@@ -44,3 +44,18 @@ h1 {
 .card-title {
   color: darkblue;
 }
+
+.footnote {
+  color: grey;
+  font-size: 10px;
+  text-align: center;
+}
+
+.gitLink {
+  color: darkblue;
+  transition: ease-in-out 200ms;
+}
+
+.gitLink:hover {
+  color: grey;
+}
