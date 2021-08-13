@@ -1,6 +1,12 @@
 h1 {
   color: darkblue;
 }
+
+h3 {
+  color: grey;
+  font-size: 15px;
+  font-weight: 100;
+}
 ul {
   margin: 0;
   padding: 0;
@@ -10,6 +16,7 @@ li {
   list-style: none;
   font-size: 15px;
 }
+
 .units {
   font-size: 15px;
   position: relative;
@@ -25,8 +32,9 @@ li {
   margin: 0 auto;
   text-align: center;
 }
-#dateTime {
-  font-size: 20px;
+.updated {
+  font-size: 15px;
+  font-weight: 100;
   color: rgba(0, 0, 139, 0.555);
 }
 #celsius,
