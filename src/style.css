@@ -104,6 +104,9 @@ li {
   margin-top: 20px;
 }
 
+.forecast {
+  text-align: center;
+}
 .forecast-temperatures-max {
   font-size: 15px;
   color: darkblue;
