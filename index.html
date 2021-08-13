@@ -14,21 +14,31 @@
   </head>
   <body>
     <div class="container">
-      <p></p>
-      <form id="searchengine">
-        <input type="search" placeholder="Change city" id="search-input" />
-        <input type="submit" class="button" id="search-button" value="Search" />
-        <input
-          type="button"
-          class="button"
-          id="locate"
-          value="Current Location"
-        />
-      </form>
-
       <div class="card">
         <div class="card-body">
-          <h1>Current Weather in Hamburg</h1>
+          <form id="searchengine">
+            <input
+              type="search"
+              placeholder="Search city"
+              class="form-control"
+              id="search-input"
+            />
+
+            <input
+              type="submit"
+              class="button"
+              id="search-button"
+              value="Search"
+            />
+
+            <input
+              type="button"
+              class="button"
+              id="locate"
+              value="Current Location"
+            />
+          </form>
+          <h1>Hamburg</h1>
           <h2 class="updated">
             Last updated <span id="date">Mon, 12:00</span>
           </h2>
@@ -44,11 +54,8 @@
             </div>
             <div class="col">
               <h2 class="degrees">
-                <span id="temperature"> 20° </span>
-                <span class="units">
-                  <a href="null" id="celsius">C</a> |
-                  <a href="null" id="fahrenheit">F</a>
-                </span>
+                <span id="temperature"> 20°</span>
+                <span class="units" id="celsius">C</span>
               </h2>
             </div>
           </div>

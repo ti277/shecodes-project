@@ -84,7 +84,7 @@ function displayTemperature(response) {
   celsiusTemperature = response.data.main.temp;
 
   temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}°`;
-  cityElement.innerHTML = `Current weather in ${response.data.name}`;
+  cityElement.innerHTML = `${response.data.name}`;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = `Humidity ${response.data.main.humidity}%`;
   windElement.innerHTML = `Wind speed ${Math.round(
@@ -132,23 +132,3 @@ locationButton.addEventListener("click", searchLocation);
 search("Hamburg");
 
 // Units Converter // Bonus
-function converttoFahrenheit(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  let temperatureElement = document.getElementById("temperature");
-  temperatureElement.innerHTML = `${Math.round(fahrenheitTemperature)}°`;
-}
-
-function converttoCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.getElementById("temperature");
-  temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}°`;
-}
-
-let fahrenheitLink = document.getElementById("fahrenheit");
-fahrenheitLink.addEventListener("click", converttoFahrenheit);
-
-let celsiusLink = document.getElementById("celsius");
-celsiusLink.addEventListener("click", converttoCelsius);
-
-let celsiusTemperature = null;
