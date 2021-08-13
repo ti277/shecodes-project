@@ -16,6 +16,10 @@ li {
   top: -8px;
 }
 
+.weathericon {
+  width: 55px;
+  padding: 5px;
+}
 #searchengine {
   display: block;
   margin: 0 auto;
