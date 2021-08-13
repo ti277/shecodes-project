@@ -1,4 +1,3 @@
-//
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -23,6 +22,33 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+       <div class="forecast-date">${day}</div>
+          <img
+          src="http://openweathermap.org/img/wn/04d@2x.png"
+          alt=""
+          width="40"
+          />
+            <div class="forecast-temperatures">
+                  <span class="forecast-temperatures-max">20°</span>
+                  <span class="forecast-temperatures-min">10°</span>
+            </div>
+        
+   </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -40,6 +66,7 @@ function displayTemperature(response) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
+  // displayForecast();
   celsiusTemperature = response.data.main.temp;
 
   temperatureElement.innerHTML = `${Math.round(celsiusTemperature)}°`;
@@ -87,6 +114,7 @@ let locationButton = document.getElementById("locate");
 locationButton.addEventListener("click", searchLocation);
 
 search("Hamburg");
+displayForecast();
 
 // Units Converter // Bonus
 function converttoFahrenheit(event) {

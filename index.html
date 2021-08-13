@@ -10,160 +10,66 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="src/style.css"/>
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container">
-      <p>
-      </p>
+      <p></p>
       <form id="searchengine">
-        <input type="search"  placeholder="Change city" id="search-input"/>
-        <input type="submit" class="button" id="search-button" value="Search"/>
-        <input type="button" class="button" id="locate" value="Current Location"/>
+        <input type="search" placeholder="Change city" id="search-input" />
+        <input type="submit" class="button" id="search-button" value="Search" />
+        <input
+          type="button"
+          class="button"
+          id="locate"
+          value="Current Location"
+        />
       </form>
-     
 
-<div class="card">
-    <div class="card-body">
-      <h1>
-      Current Weather in Hamburg
-      </h1>
-      <h2 class = "updated">
-        Last updated <span id="date">Mon, 12:00</span>
-      </h2>
-      <h3 id="description">Sunny</h3>
-      <div class="row">
-        <div class="col">
-      <img src="http://openweathermap.org/img/wn/04d@2x.png" alt="weather" class="weathericon" id="icon">
-        
-      
-    </div>
-    <div class="col">
-    <h2 class="degrees">
-      <span id="temperature"> 
-      20°
-      </span>
-     <span class="units">
-      <a href="null" id="celsius">C</a> |
-      <a href="null" id="fahrenheit">F</a>
-
-    </span>
-      
-    </h2>
-  </div>
-  </div>
-  <div class="row">
-    <div class="col precipitation">
-      <ul>
-        <li id="humidity">
-          20% humidity
-        </li>
-        <li id="windspeed"> 2 km/h wind
-        </li>
-      </ul>
-    </div>
-  </div>
-    </div>
-  </div>
       <div class="card">
-      <div class="card-body">
-        <h1> Forecast
-        </h1>
-        <div class="row">
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Tomorrow</h5>
-                  <div class="row">
-                    <div class="col emoji">
-                  <p class="card-emoji">🌦</p>
-                    </div>
-                    <div class="col text">
-                      20°
-                    </div>
-                </div>
-                </div>
-              </div>
+        <div class="card-body">
+          <h1>Current Weather in Hamburg</h1>
+          <h2 class="updated">
+            Last updated <span id="date">Mon, 12:00</span>
+          </h2>
+          <h3 id="description">Sunny</h3>
+          <div class="row">
+            <div class="col">
+              <img
+                src="http://openweathermap.org/img/wn/04d@2x.png"
+                alt="weather"
+                class="weathericon"
+                id="icon"
+              />
             </div>
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Friday</h5>
-                  <div class="row">
-                      <div class="col emoji">
-                  <p class="card-emoji">☀️
-                  </p>
-                </div>
-                <div class="col text">
-                  20°
-                </div>
-                </div>
-              </div>
+            <div class="col">
+              <h2 class="degrees">
+                <span id="temperature"> 20° </span>
+                <span class="units">
+                  <a href="null" id="celsius">C</a> |
+                  <a href="null" id="fahrenheit">F</a>
+                </span>
+              </h2>
             </div>
           </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Saturday</h5>
-                  <div class="row">
-                    <div class="col emoji">
-                  <p class="card-emoji">⛈</p>
-                    </div>
-                    <div class="col text">
-                      25°
-                    </div>
-                </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Sunday</h5>
-                  <div class="row">
-                      <div class="col emoji">
-                  <p class="card-emoji">🌧
-                  </p>
-                </div>
-                <div class="col text">
-                  23°
-                </div>
-                </div>
-              </div>
+          <div class="row">
+            <div class="col precipitation">
+              <ul>
+                <li id="humidity">20% humidity</li>
+                <li id="windspeed">2 km/h wind</li>
+              </ul>
             </div>
           </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Monday</h5>
-                  <div class="row">
-                    <div class="col emoji">
-                  <p class="card-emoji">☀️</p>
-                    </div>
-                    <div class="col text">
-                      22°
-                    </div>
-                </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">See details</h5>
-                  <button class="button">Go to weather.com</button>
-            </div>
-          </div>
+          <div class="forecast" id="forecast"></div>
         </div>
       </div>
-      </div>
-      
-  </div>
-  <p class="footnote">See my GitHub <a href = "https://github.com/ti277/shecodes-project" class="gitLink"> Repository</a> </p>
+    </div>
+    <p class="footnote">
+      See my GitHub
+      <a href="https://github.com/ti277/shecodes-project" class="gitLink">
+        Repository</a
+      >
+    </p>
     <script src="src/index.js"></script>
   </body>
 </html>
